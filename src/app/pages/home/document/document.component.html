@@ -1,0 +1,23 @@
+<div class="container-fluid ">
+    <div class="docs-warpper">
+        
+        <div class="row content-wrapper">
+          <div class="col-12" >
+            <h2>Documents</h2>
+            <owl-carousel-o  [options]=" customOptions " >
+              <ng-template carouselSlide *ngFor = "let item of documents">
+                <div class="card">
+                  <img src="{{item.ImgPath}}" class="card-img-top w-100" alt="{{item.ImgAlt}}" >
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.Title}}</h5>
+                    <span class="kind">{{item.Kind}}</span>
+                    <a href="#">See Details <img src="/assets/icons/more-details.svg" style="width: 20px;" alt="more-details"></a>
+                  </div>
+                </div>
+              </ng-template>  
+            </owl-carousel-o>
+          </div>
+        </div>
+  
+    </div>
+  </div>

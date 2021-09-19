@@ -1,0 +1,95 @@
+.figure img {
+  position: absolute;
+}
+
+.polygon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.polygon img {
+  width: 380px;
+  height: 450px;
+  position: absolute;
+  top: 30% !important;
+  right: 3.5% !important;
+}
+
+.text-wrapper {
+  position: absolute;
+  line-height: 34px;
+  padding: 10px 35px;
+  width: 340px;
+  top: 41%;
+  right: 5%;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+.text-wrapper .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.text-wrapper .content {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+}
+
+@media only screen and (max-width: 1100px) {
+  .polygon img {
+    display: none;
+  }
+
+  .text-wrapper {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1001px) and (max-width: 1100px) {
+  .polygon img {
+    width: 340px !important;
+    top: 19% !important;
+    right: 2% !important;
+  }
+
+  .text-wrapper {
+    padding: 10px 35px !important;
+    top: 32% !important;
+    right: 2% !important;
+  }
+  .text-wrapper .content {
+    font-size: 14px !important;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1300px) {
+  .polygon img {
+    width: 370px !important;
+    height: 450px;
+    position: absolute;
+    top: 24% !important;
+    right: 1% !important;
+  }
+
+  .text-wrapper {
+    padding: 10px 40px !important;
+    top: 36% !important;
+    right: 2% !important;
+  }
+  .text-wrapper .content {
+    font-size: 15px !important;
+  }
+}
+@media only screen and (min-width: 1301px) {
+  .polygon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .polygon img {
+    width: 380px;
+    height: 450px;
+    position: absolute;
+    top: 30% !important;
+    right: 3.5% !important;
+  }
+}/*# sourceMappingURL=main-slider.component.css.map */

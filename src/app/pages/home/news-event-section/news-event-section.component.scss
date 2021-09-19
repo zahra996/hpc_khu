@@ -1,0 +1,124 @@
+// font variable
+$font-path: "/assets/fonts";
+$font-family-poppins: 'Poppins', sans-serif;
+$font-family-nunito: 'Nunito', sans-serif;
+$font-weight: 600;
+$font-style: normal;
+
+// color variables
+$white-color: #fff;
+$black-color: #000;
+$bg-light-blue: #edf6f9;
+$bg-top-header: #134c83;
+
+// mixin
+@mixin flex($display: flex, $position-x: center, $position-y: center) {
+  display: $display;
+  justify-content: $position-x;
+  align-items: $position-y;
+}
+
+.max-width {
+  padding: 0 40px;
+}
+
+ul > li {
+  list-style: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-light-blue !important;
+}
+
+.container-fluid {
+  position: relative;
+  width: 92% !important;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0 10px 0px rgba(224, 224, 224, 0.452);
+  margin-top: 41%;
+  height: 480px;
+  border-radius: 15px;
+  background-image: url('/assets/icons/colorful-circles.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  .news-event-warpper {
+    overflow-x: hidden !important;
+    width: 100%;
+    margin-top: 41%;
+    .title-wrapper{
+      ul {
+        margin: 18px 0 0 13px !important;
+        display: flex;
+        li {
+          margin: 5px 10px;
+          padding: 0 0 10px 0;
+          font: {
+            size: 18px;
+            weight: 700;
+            family: $font-family-nunito;
+          }
+          a {
+            padding: 4px !important;
+            color: $black-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .content-wrapper {
+      padding: 5px 25px !important;
+      .card {
+        margin: 0 5px;
+        border-radius: 10px;
+        overflow: hidden;
+        .card-text {
+          font: {
+            size: 16px;
+            family: $font-family-nunito;
+          }
+          margin-bottom: 5px !important;
+        }
+        span {
+          font: {
+            size: 14px;
+            weight: 700;
+          }
+          color: $bg-top-header;
+        }
+      }
+    }
+    
+  }
+}
+.active {
+  border-bottom: 3px solid $bg-top-header;
+}
+// ===============================================
+// styles of slider-package
+
+:host::ng-deep .owl-prev,
+:host::ng-deep .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff !important;
+  box-shadow: 2px 0 15px 0 rgb(0 0 0 / 15%);
+  width: 35px;
+  height: 35px;
+  @include flex(flex !important, center !important, center !important);
+}
+
+:host::ng-deep .owl-prev {
+  left: 0%;
+}
+:host::ng-deep .owl-next {
+  right: 0%;
+}
+:host::ng-deep .owl-theme .owl-nav [class*=owl-] {
+  margin: 5px;
+  padding: 4px 7px;
+}
+
+// end slider-package

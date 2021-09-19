@@ -1,0 +1,118 @@
+.max-width {
+  padding: 0 40px;
+}
+
+ul > li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #edf6f9 !important;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-fluid {
+  position: relative;
+  width: 94%;
+}
+.container-fluid .docs-warpper {
+  overflow-x: hidden !important;
+  width: 100%;
+  margin-top: 10px;
+}
+.container-fluid .docs-warpper .title-wrapper ul {
+  margin: 18px 0 0 13px !important;
+  display: flex;
+}
+.container-fluid .docs-warpper .title-wrapper ul li {
+  margin: 5px 10px;
+  padding: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+.container-fluid .docs-warpper .title-wrapper ul li a {
+  padding: 4px !important;
+  color: #000;
+  cursor: pointer;
+}
+.container-fluid .docs-warpper .content-wrapper {
+  padding: 5px 25px !important;
+}
+.container-fluid .docs-warpper .content-wrapper .card {
+  margin: 0 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container-fluid .docs-warpper .content-wrapper .card .card-text {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 5px !important;
+}
+.container-fluid .docs-warpper .content-wrapper .card .card-body {
+  position: relative;
+}
+.container-fluid .docs-warpper .content-wrapper .card .kind {
+  top: -20px;
+  color: #F6AE2D;
+  text-transform: capitalize;
+  left: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 104px;
+  height: 32px;
+  background-color: #fff2d1;
+  border-radius: 5px;
+}
+.container-fluid .docs-warpper .content-wrapper .card a {
+  font-size: 14px;
+  font-weight: 700;
+  font-text-decoration: none !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #134c83;
+}
+.container-fluid .docs-warpper .content-wrapper .card a img {
+  color: #134c83;
+  margin: 0 10px;
+}
+
+:host::ng-deep .owl-prev,
+:host::ng-deep .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff !important;
+  box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.15);
+  width: 35px;
+  height: 35px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+:host::ng-deep .owl-prev {
+  left: 0%;
+}
+
+:host::ng-deep .owl-next {
+  right: 0%;
+}
+
+:host::ng-deep .owl-theme .owl-nav [class*=owl-] {
+  margin: 5px;
+  padding: 4px 7px;
+}/*# sourceMappingURL=document.component.css.map */

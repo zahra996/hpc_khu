@@ -1,0 +1,170 @@
+// font variable
+$font-path: "/assets/fonts";
+$font-family-poppins: 'Poppins', sans-serif;
+$font-family-nunito: 'Nunito', sans-serif;
+$font-weight: 600;
+$font-style: normal;
+
+// color variables
+$white-color: #fff;
+$black-color: #000;
+$bg-light-blue: #edf6f9;
+$bg-top-header: #134c83;
+
+// mixin
+@mixin flex($display: flex, $position-x: center, $position-y: center) {
+  display: $display;
+  justify-content: $position-x;
+  align-items: $position-y;
+}
+.max-width {
+  padding: 0 40px;
+}
+
+ul > li {
+  list-style: none;
+}
+
+// styles of navbar
+@media only screen and (max-width: 600px) {
+  .main-menu {
+    padding: 0 15px;
+  }
+  .navbar-toggler-icon img {
+    padding: 15px 0;
+  }
+  .register-buttons {
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navbar-wrapper {
+    margin: 10px 0 !important;
+  }
+}
+
+.main-menu {
+  font: {
+    family: $font-family-poppins;
+    size: 16px;
+    weight: 500;
+  }
+ .navbar-wrapper {
+   width: 100%;
+   @include flex(flex, center, center);
+   margin: 20px 0;
+   .container-fluid {
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    .navbar-toggler-icon img {
+      padding: 15px 0;
+    }
+    ul {
+      z-index: 1;
+    }
+    .nav-item {
+      padding: 0 10px;
+    }
+    .nav-item a {
+      color: $black-color;
+      display: inline-block;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+    }
+    .nav-item a:hover {
+      border-bottom: 3px solid $bg-top-header;
+    }
+    .navbar-nav > li .active {
+      font-weight: 700;
+    }
+  }
+  .register-buttons {
+    @include flex(flex, center, center);
+    margin-right: 20px !important;
+  }
+  .custom-signUp-button {
+    @include flex(flex, center, center);
+    text-decoration: none;
+    width: 90px;
+    height: 37px;
+    border: none;
+    background-color: $bg-top-header;
+    border-radius: 20px;
+    margin: 0 5px;
+    color: $white-color;
+    font: {
+      size: 16px;
+      weight: $font-weight;
+    }
+    box-shadow: 5px 5px 17px 0px rgba(22, 87, 226, 0.288);
+  }
+  .custom-login-button {
+    @include flex(flex, center, center);
+    text-decoration: none;
+    width: 90px;
+    height: 37px;
+    border: none;
+    background-color: $white-color;
+    border-radius: 20px;
+    color: #000;
+    box-shadow: 5px 5px 17px 0px rgba(22, 87, 226, 0.288);
+    font: {
+      size: 16px;
+      weight: $font-weight;
+    }
+  }
+ }
+}
+
+@media only screen and (max-width:375px)  {
+  .navbar-toggler-icon img{
+    padding: 5px 0 0 0 !important;
+    width: 25px !important;
+}
+ul li {
+  font-size: 14px !important;
+  width: 88% !important;
+  padding: 0 50px !important;
+}
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-toggler-icon img{
+        padding: 5px 0 0 0 !important;
+        width: 30px !important;
+    }
+  ul {
+    background-color: #c2d4e1 !important;
+    width: 100% !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+  }
+  ul li {
+    width: 88% !important;
+    padding: 0 50px !important;
+  }
+}
+// responsive register button
+@media only screen and (max-width:375px) {
+  .custom-signUp-button {
+    font-size: 12px !important;
+    width: 70px !important;
+    height: 30px !important;
+  }
+  .custom-login-button {
+    font-size: 12px !important;
+    width: 70px !important;
+    height: 30px !important;
+  }
+}
+@media only screen and(min-width: 376px) and (max-width: 992px) {
+  .custom-signUp-button {
+    font-size: 14px !important;
+  }
+  .custom-login-button {
+    font-size: 14px !important;
+  }
+}
+// end of navbar

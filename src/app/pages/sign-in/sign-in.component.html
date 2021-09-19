@@ -1,0 +1,44 @@
+<app-top-header></app-top-header>
+<figure class="figure">
+    <img src="/assets/images/bg-register.png" class="figure-img img-fluid w-100" alt="bg-register" > 
+  </figure>
+<div class="container-fluid position-absolute mt-3" style="padding: 10px 60px;">
+    <div class="row d-flex justify-content-end ">
+        <div class="col-12 col-md-8 col-lg-5">
+            <h4 class="mb-3">Sign In</h4>
+            <form class="custom-form" [formGroup]="Form" (ngSubmit)="onSubmit()">
+                <span class="help-block text-danger" role="alert" *ngIf="!Form.valid && Form.touched">Please fill in the information for all fields</span>
+                    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
+                        <label for="username" class="custom-label">Email (Just Academic Email)</label>
+                        <input type="text" class="form-control" id="username" formControlName="username">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
+                        <label for="password" class="custom-label">Password </label>
+                        <input type="password" class="form-control" id="password" formControlName="password">
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="remember-me" >
+                            <label class="form-check-label custom-check-label" for="remember-me">Remember Me!</label>
+                    </div>  
+                    <div class="col-md-12">
+                        <re-captcha (resolved)="resolved($event)"  class="col-12" 
+                        formControlName="recaptchaReactive" 
+                        siteKey="6Le1DmEcAAAAAEKOBRTzFOsTHit3xzskLLb2h0p7">  
+                    </re-captcha>
+                      </div>
+
+                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
+                    <button type="submit" class="w-100 p-2 mt-2 custom-btn">Sign In</button>
+                </div>
+                <p class="mt-2">Dont have an account ? <a [routerLink]="['/signUp']">Create an account </a></p>
+                <a class="custom-link" [routerLink]="['/forgotPassword']">Forgot Password ?</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+     
+
+
+

@@ -1,0 +1,313 @@
+// font variable
+$font-path: "/assets/fonts";
+$font-family-poppins: 'Poppins', sans-serif;
+$font-family-nunito: 'Nunito', sans-serif;
+$font-weight: 600;
+$font-style: normal;
+
+// color variables
+$white-color: #fff;
+$black-color: #000;
+$bg-light-blue: #edf6f9;
+$bg-top-header: #134c83;
+
+// mixin
+@mixin flex($display: flex, $position-x: center, $position-y: center) {
+  display: $display;
+  justify-content: $position-x;
+  align-items: $position-y;
+}
+
+.max-width {
+  padding: 0 40px;
+}
+
+ul > li {
+  list-style: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bg-light-blue !important;
+  }
+  // ================================================
+  // styles of shape
+  @media only screen and (max-width: 992px) {
+    .shape {
+      clip-path: ellipse(700px 740px at 30% 35%) !important;
+      // height: 200px !important;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1150px) {
+    .shape {
+      clip-path: ellipse(700px 740px at 12% 35%) !important;
+    }
+  }
+  
+  .wrapper {
+    background-color: $bg-light-blue;
+    height: 30px;
+  }
+  
+  .shape {
+    position: absolute;
+    height: 100vh;
+    background-color: $bg-light-blue;
+    width: 100%;
+    opacity: 0.73;
+    background-image: linear-gradient(
+      152deg,
+      rgba(19, 76, 131, 0.38) 17%,
+      rgba(12, 46, 80, 0.08) 48%,
+      rgba(10, 38, 66, 0) 80%
+    );
+     clip-path: ellipse(700px 740px at 25% 35%);
+    z-index: 0;
+  }
+  // end of shape
+  
+  // ================================================
+  
+  // styles of top-header
+  @media only screen and (max-width:450px) {
+    .top-header {
+        padding: 0;
+        .navbar-brand {
+          width: 50%;
+          .university-name {
+            font-size: 20px !important;
+            font-weight: 500 !important;
+          }
+      .explain{
+          display: none !important;
+      }
+  }
+  .border-end {
+      display: none !important;
+  }
+}
+  }
+
+  @media only screen and(min-width:451px) and (max-width: 600px){
+    .top-header {
+      padding: 0;
+      .navbar-brand {
+        width: 70%;
+        .university-name {
+          font-size: 20px !important;
+          font-weight: 500 !important;
+        }
+        .explain {
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+  .top-header {
+    height: 60px;
+    background-color: $bg-top-header;
+    .navbar-brand {
+      padding: 0;
+      @include flex(flex, center, center);
+      .university-name {
+        color: $white-color;
+        margin: 0 10px 0 10px;
+        font: {
+          family: $font-family-poppins;
+          size: 24px;
+          weight: $font-weight;
+        }
+      }
+      .border-end {
+        height: 45px;
+      }
+      .explain {
+        line-height: 27px;
+        color: $white-color;
+        margin: 0;
+        padding: 0 10px;
+        font: {
+          size: 16px;
+          family: $font-family-poppins;
+          weight: 500;
+        }
+        hr {
+          margin: 0;
+          padding: 0;
+          background-color: $bg-top-header;
+        }
+      }
+    }
+    .custom-dropdown {
+      a {
+        color: $white-color;
+        @include flex(flex, center, center);
+        font-size: 13px;
+        img {
+          margin: 0 5px;
+        }
+      }
+      .custom-dropdown-menu {
+        min-width: 7rem !important;
+        border: none;
+        background-color: $bg-top-header;
+        .dropdown-item:hover {
+          background-color: $bg-light-blue;
+          color: $black-color;
+        }
+      }
+      .dropdown-item {
+        color: $white-color;
+        @include flex(flex, end, center);
+        font-size: 13px;
+      }
+    }
+  }
+  
+  // end of top-header
+  
+  // ================================================
+  // styles of navbar
+@media only screen and (max-width: 600px) {
+  .main-menu {
+    padding: 0 15px;
+  }
+  .navbar-toggler-icon img {
+    padding: 15px 0;
+  }
+  .register-buttons {
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navbar-wrapper {
+    margin: 10px 0 !important;
+  }
+}
+
+.main-menu {
+  font: {
+    family: $font-family-poppins;
+    size: 16px;
+    weight: 500;
+  }
+ .navbar-wrapper {
+   width: 100%;
+   @include flex(flex, center, center);
+   margin: 20px 0;
+   .container-fluid {
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    .navbar-toggler-icon img {
+      padding: 15px 0;
+    }
+    ul {
+      z-index: 1;
+    }
+    .nav-item {
+      padding: 0 10px;
+    }
+    .nav-item a {
+      color: $black-color;
+      display: inline-block;
+      border-bottom: 3px solid transparent;
+    }
+    .nav-item a:hover {
+      border-bottom: 3px solid $bg-top-header;
+    }
+    .navbar-nav > li .active {
+      font-weight: 700;
+    }
+  }
+  .register-buttons {
+    @include flex(flex, center, center);
+    margin-right: 20px !important;
+  }
+  .custom-signUp-button {
+    @include flex(flex, center, center);
+    text-decoration: none;
+    width: 90px;
+    height: 37px;
+    border: none;
+    background-color: $bg-top-header;
+    border-radius: 20px;
+    margin: 0 5px;
+    color: $white-color;
+    font: {
+      size: 16px;
+      weight: $font-weight;
+    }
+    box-shadow: 5px 5px 17px 0px rgb(22 87 226 / 29%);
+  }
+  .custom-login-button {
+    @include flex(flex, center, center);
+    text-decoration: none;
+    width: 90px;
+    height: 37px;
+    border: none;
+    background-color: $white-color;
+    border-radius: 20px;
+    color: #000;
+    box-shadow: 5px 5px 17px 0px rgb(22 87 226 / 29%);
+    font: {
+      size: 16px;
+      weight: $font-weight;
+    }
+  }
+ }
+}
+
+@media only screen and (max-width:375px)  {
+  .navbar-toggler-icon img{
+    padding: 5px 0 0 0 !important;
+    width: 25px !important;
+}
+ul li {
+  font-size: 14px !important;
+  width: 88% !important;
+  padding: 0 50px !important;
+}
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-toggler-icon img{
+        padding: 5px 0 0 0 !important;
+        width: 30px !important;
+    }
+  ul {
+    background-color: #c2d4e1 !important;
+    width: 100% !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+  }
+  ul li {
+    width: 88% !important;
+    padding: 0 50px !important;
+  }
+}
+// responsive register button
+@media only screen and (max-width:375px) {
+  .custom-signUp-button {
+    font-size: 12px !important;
+    width: 70px !important;
+    height: 30px !important;
+  }
+  .custom-login-button {
+    font-size: 12px !important;
+    width: 70px !important;
+    height: 30px !important;
+  }
+}
+@media only screen and(min-width: 376px) and (max-width: 992px) {
+  .custom-signUp-button {
+    font-size: 14px !important;
+  }
+  .custom-login-button {
+    font-size: 14px !important;
+  }
+}
+// end of navbar
+  

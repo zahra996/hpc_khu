@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <!-- Nunito font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <!-- Poppins font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- background shape -->
+    <div class="wrapper"></div>
+    <div class="shape fixed-top"></div>
+    <!-- end background shape -->
+    
+    <!-- start top-header -->
+    <nav class="navbar top-header max-width mt-2">
+        <div class="container-fluid">
+          <!-- left side -->
+          <a class="navbar-brand" [routerLink]="['/']">
+            <img src="/assets/icons/logo.svg" alt="Logo" width="35" class="d-inline-block align-text-top" />
+            <span class="university-name">Kharazmi</span>
+            <span class="border-end"></span>
+            <div class="explain">
+              High Performance
+              <hr />
+              Computing Center
+            </div>
+          </a>
+          <!-- right side -->
+          <div ngbDropdown class="dropdown custom-dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle custom-nav-link" href="#" role="button" data-bs-toggle="dropdown" >
+              <img src="/assets/icons/en-flag.svg" width="18px" height="18px"  alt="en-flag" />
+              English
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+              <a ngbDropdownItem class="dropdown-item" href="#">
+                  <img src="/assets/icons/ir-flag.svg" width="18px" height="18px" alt="ir-flag" />
+                  Persian</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      
+      <!-- end top-header -->
+</body>
+</html>

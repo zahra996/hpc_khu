@@ -1,0 +1,32 @@
+<div id="pricing" class="container-fluid">
+    <div class="container-fluid">
+        <h2>Pricing</h2>
+        <table>
+            <thead>
+              <tr>
+                <th scope="col">Row</th>
+                <th scope="col">Ram</th>
+                <th scope="col">Nodes</th>
+                <th scope="col">Memory</th>
+                <th scope="col">Core</th>
+                <th scope="col">Price</th>
+    
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let info of infos">
+                <th scope="row">{{info.Row}}</th>
+                <td>{{info.Ram}}</td>
+                <td>{{info.Nodes}}</td>
+                <td>{{info.Memory}}</td>
+                <td>{{info.Core}}</td>
+                <td>{{info.Price}}</td>
+              </tr>
+
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,42 @@
+
+ <!-- start navbar -->
+ <nav class="navbar navbar-expand-lg main-menu max-width">
+  <div class="navbar-wrapper">
+    <div class="container-fluid ">
+      <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
+        <span class="navbar-toggler-icon"><img src="/assets/icons/hamburger-menu.svg" alt="menu"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-right custom-collapse" id="navbarSupportedContent" [ngbCollapse]="isMenuCollapsed">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item " style="padding-left: 0;">
+            <a class="nav-link active" style="padding-left: 0;" aria-current="page" [routerLink]="['/']" routerLinkActive = "active" [routerLinkActiveOptions]="{exact: true}" (click)="goToHome()" >Home</a>
+          </li>
+          <li id = "news&event" class="nav-item"  routerLinkActive = "active">
+            <a class="nav-link" (click)="goToNews()">News&Event</a>
+          </li>
+          <li id = "services" class="nav-item"  routerLinkActive = "active">
+            <a class="nav-link"  (click)="goToServices()" >Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >People</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  (click)="goToEducation()">Education</a>
+          </li>
+          <li id = "cantact" class="nav-item"  routerLinkActive = "active">
+            <a class="nav-link"  (click)="goToContact()">Contact Us</a>
+          </li>  
+        </ul>  
+      </div>
+  </div>
+   <!-- Register buttons -->
+   <span class=" register-buttons " >
+    <a  class="custom-signUp-button" [routerLink]="['/signUp']" routerLinkActive="active">Sign Up</a>
+    <a  class="custom-login-button" [routerLink]="['/signIn']" routerLinkActive="active">Sign In</a>
+   </span>
+<!-- end of register buttons -->
+  </div>
+ 
+</nav>
+<!-- end navbar -->
+

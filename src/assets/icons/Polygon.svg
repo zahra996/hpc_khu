@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="627" height="543" viewBox="0 0 627 543">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.876" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffedce" stop-opacity="0"/>
+      <stop offset="0.962" stop-color="#edf6f9" stop-opacity="0.188"/>
+      <stop offset="1" stop-color="#edf6f9"/>
+    </radialGradient>
+  </defs>
+  <g id="Polygon_7" data-name="Polygon 7" fill="url(#radial-gradient)">
+    <path d="M 469.9613342285156 542.5 L 157.0386657714844 542.5 L 0.5773370265960693 271.5 L 157.0386657714844 0.5 L 469.9613342285156 0.5 L 626.4226684570312 271.5 L 469.9613342285156 542.5 Z" stroke="none"/>
+    <path d="M 157.3273315429688 1 L 1.1546630859375 271.5 L 157.3273315429688 542 L 469.6726684570312 542 L 625.8453369140625 271.5 L 469.6726684570312 1 L 157.3273315429688 1 M 156.75 0 L 470.25 0 L 627 271.5 L 470.25 543 L 156.75 543 L 0 271.5 L 156.75 0 Z" stroke="none" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,153 @@
+.max-width {
+  padding: 0 40px;
+}
+
+ul > li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-menu {
+    padding: 0 15px;
+  }
+
+  .navbar-toggler-icon img {
+    padding: 15px 0;
+  }
+
+  .register-buttons {
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navbar-wrapper {
+    margin: 10px 0 !important;
+  }
+}
+.main-menu {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-menu .navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.main-menu .navbar-wrapper .container-fluid .navbar-toggler:focus {
+  box-shadow: none;
+}
+.main-menu .navbar-wrapper .container-fluid .navbar-toggler-icon img {
+  padding: 15px 0;
+}
+.main-menu .navbar-wrapper .container-fluid ul {
+  z-index: 1;
+}
+.main-menu .navbar-wrapper .container-fluid .nav-item {
+  padding: 0 10px;
+}
+.main-menu .navbar-wrapper .container-fluid .nav-item a {
+  color: #000;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+.main-menu .navbar-wrapper .container-fluid .nav-item a:hover {
+  border-bottom: 3px solid #134c83;
+}
+.main-menu .navbar-wrapper .container-fluid .navbar-nav > li .active {
+  font-weight: 700;
+}
+.main-menu .navbar-wrapper .register-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px !important;
+}
+.main-menu .navbar-wrapper .custom-signUp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 90px;
+  height: 37px;
+  border: none;
+  background-color: #134c83;
+  border-radius: 20px;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 5px 5px 17px 0px rgba(22, 87, 226, 0.288);
+}
+.main-menu .navbar-wrapper .custom-login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 90px;
+  height: 37px;
+  border: none;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #000;
+  box-shadow: 5px 5px 17px 0px rgba(22, 87, 226, 0.288);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar-toggler-icon img {
+    padding: 5px 0 0 0 !important;
+    width: 25px !important;
+  }
+
+  ul li {
+    font-size: 14px !important;
+    width: 88% !important;
+    padding: 0 50px !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navbar-toggler-icon img {
+    padding: 5px 0 0 0 !important;
+    width: 30px !important;
+  }
+
+  ul {
+    background-color: #c2d4e1 !important;
+    width: 100% !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+  }
+
+  ul li {
+    width: 88% !important;
+    padding: 0 50px !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .custom-signUp-button {
+    font-size: 12px !important;
+    width: 70px !important;
+    height: 30px !important;
+  }
+
+  .custom-login-button {
+    font-size: 12px !important;
+    width: 70px !important;
+    height: 30px !important;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 992px) {
+  .custom-signUp-button {
+    font-size: 14px !important;
+  }
+
+  .custom-login-button {
+    font-size: 14px !important;
+  }
+}/*# sourceMappingURL=header.component.css.map */

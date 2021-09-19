@@ -1,0 +1,54 @@
+<div class="container-fluid ">
+    <div class="news-event-warpper">
+      <div class="row title-row">
+        <div class="col-12 title-wrapper">
+          <ul class="nav">
+            <li class= "nav-item"  *ngFor="let title of Titles">
+              <a  class="nav-link" (click) = "openContent(title)" [ngClass] = "{'active': selectedTitle === title}">{{title}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      
+        <div class="row content-wrapper" *ngIf="selectedTitle === 'News'">
+          <div class="col-12" >
+            <owl-carousel-o  [options]=" customOptions " >
+              <ng-template carouselSlide *ngFor = "let item of news">
+                <div class="card" >
+                  <img src="{{item.ImgPath}}" class="card-img-top w-100" alt="{{item.ImgAlt}}" >
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.Title}}</h5>
+                    <p class="card-text ">{{item.Content}}</p>
+                    <span >{{item.Date}}</span>
+                  </div>
+                </div>
+              </ng-template>  
+            </owl-carousel-o>
+          </div>
+        </div>
+  
+      
+      <ng-container *ngIf="selectedTitle === 'Event'">
+        <div class="row content-wrapper" >
+          <div class="col-12" >
+            <owl-carousel-o [options]="customOptions" >
+              <ng-template carouselSlide *ngFor = "let item of event">
+                <div class="card">
+                  <img src="{{item.ImgPath}}" class="card-img-top w-100" alt="{{item.ImgAlt}}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.Title}}</h5>
+                    <p class="card-text ">{{item.Content}}</p>
+                    <span >{{item.Date}}</span>
+                  </div>
+                </div>
+              </ng-template>  
+            </owl-carousel-o>
+          </div>
+        </div>
+      </ng-container>
+      
+    </div>
+  </div>
+  
+  

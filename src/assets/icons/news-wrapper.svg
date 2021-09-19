@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1728" height="887" viewBox="0 0 1728 887">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#134c83" stop-opacity="0.322"/>
+      <stop offset="1" stop-color="#0a2642" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="Rectangle_5" x="81" y="0" width="1647" height="652" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_2949" data-name="Group 2949" transform="translate(-56 -1252)">
+    <g id="circles" transform="translate(-21 102.959)">
+      <g id="Group_251" data-name="Group 251" transform="translate(1054 1308.345)">
+        <circle id="Ellipse_4" data-name="Ellipse 4" cx="208.5" cy="208.5" r="208.5" transform="translate(0 -0.303)" opacity="0.23" fill="url(#radial-gradient)"/>
+        <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="356" cy="194" rx="356" ry="194" transform="translate(28 14.697)" fill="url(#radial-gradient)"/>
+      </g>
+      <g id="Group_252" data-name="Group 252" transform="translate(288 1286.896)" opacity="0.92">
+        <circle id="Ellipse_4-2" data-name="Ellipse 4" cx="329.5" cy="329.5" r="329.5" transform="translate(0 0.145)" opacity="0.23" fill="url(#radial-gradient)"/>
+        <ellipse id="Ellipse_5-2" data-name="Ellipse 5" cx="548.5" cy="206" rx="548.5" ry="206" transform="translate(42 23.145)" fill="url(#radial-gradient)"/>
+      </g>
+      <g id="Group_253" data-name="Group 253" transform="translate(1209 1244)" opacity="0.57">
+        <circle id="Ellipse_4-3" data-name="Ellipse 4" cx="153.5" cy="153.5" r="153.5" transform="translate(0 0.041)" opacity="0.23" fill="url(#radial-gradient)"/>
+        <ellipse id="Ellipse_5-3" data-name="Ellipse 5" cx="261.5" cy="143" rx="261.5" ry="143" transform="translate(21 11.041)" fill="url(#radial-gradient)"/>
+      </g>
+      <g id="Group_254" data-name="Group 254" transform="translate(167 1311.204)" opacity="0.12">
+        <circle id="Ellipse_4-4" data-name="Ellipse 4" cx="153.5" cy="153.5" r="153.5" transform="translate(0 -0.163)" fill="#f6ae2d" opacity="0.23"/>
+        <ellipse id="Ellipse_5-4" data-name="Ellipse 5" cx="261.5" cy="142.5" rx="261.5" ry="142.5" transform="translate(20 10.837)" fill="#f6ae2d"/>
+      </g>
+      <g id="Group_255" data-name="Group 255" transform="translate(729 1418.445)" opacity="0.12">
+        <circle id="Ellipse_4-5" data-name="Ellipse 4" cx="137" cy="137" r="137" transform="translate(0 -0.404)" fill="#f6ae2d" opacity="0.23"/>
+        <ellipse id="Ellipse_5-5" data-name="Ellipse 5" cx="261.5" cy="126.5" rx="261.5" ry="126.5" transform="translate(20 10.596)" fill="#f6ae2d"/>
+      </g>
+      <g id="Group_256" data-name="Group 256" transform="translate(820 1320.499)" opacity="0.12">
+        <circle id="Ellipse_4-6" data-name="Ellipse 4" cx="153.5" cy="153.5" r="153.5" transform="translate(0 -0.457)" fill="#f6ae2d" opacity="0.23"/>
+        <ellipse id="Ellipse_5-6" data-name="Ellipse 5" cx="261.5" cy="143" rx="261.5" ry="143" transform="translate(21 10.543)" fill="#f6ae2d"/>
+      </g>
+    </g>
+    <g id="Group_318" data-name="Group 318" transform="translate(0 -223)">
+      <g transform="matrix(1, 0, 0, 1, 56, 1475)" filter="url(#Rectangle_5)">
+        <rect id="Rectangle_5-2" data-name="Rectangle 5" width="1629" height="634" rx="15" transform="translate(90 2)" fill="#fff" opacity="0.61"/>
+      </g>
+    </g>
+  </g>
+</svg>
