@@ -84,3 +84,12 @@ h4 {
     }
 }
 }
+input.ng-invalid.ng-touched {
+    border: 1px solid red !important;
+}
+.error {
+    font: {
+        size: 14px;
+        weight: 500;
+    }
+}

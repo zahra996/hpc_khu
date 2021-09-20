@@ -19,10 +19,10 @@ export class SignInComponent implements OnInit {
         confirmPassword: new FormControl(null,Validators.required)
        })  
   }
-  resolved(captchaResponse: string) {
-    console.log(`Resolved response token: ${captchaResponse}`);
+  // resolved(captchaResponse: string) {
+  //   console.log(`Resolved response token: ${captchaResponse}`);
    
-  }
+  // }
   public onSubmit() {
     this.authService.onSignIn(this.Form.value).subscribe(
       (response: any) => {

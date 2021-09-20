@@ -1,30 +1,41 @@
 <app-top-header></app-top-header>
 <figure class="figure">
-    <img src="/assets/images/bg-register.png" class="figure-img img-fluid w-100" alt="bg-register" > 
+    <img src="/assets/images/bg-register.png" class="figure-img img-fluid w-100" alt="bg-register" style="height: 115vh;"> 
   </figure>
 <div class="container-fluid position-absolute mt-3" style="padding: 10px 60px;">
     <div class="row d-flex justify-content-end ">
         <div class="col-12 col-md-8 col-lg-5">
+            <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Oops!</strong> Your registration was successful.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+                <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong> Try Again.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>   
             <h4 class="mb-3">Sign Up</h4>
             <form class="custom-form" [formGroup]="Form" (ngSubmit)="onSubmit()">
-                <span class="help-block text-danger" role="alert" *ngIf="!Form.valid && Form.touched">Please fill in the information for all fields</span>
                 <div class="d-flex">
                     <div class="col-xs-16 col-sm-4 col-md-3 col-lg-2 mt-2 w-50">
                         <label for="firstName" class="custom-label">First Name</label>
                         <input type="text" class="form-control" id="firstname" formControlName="firstName" [(ngModel)] = "data_row.firstName">
+                        <span *ngIf="Form.get('firstName')!.invalid && Form.get('firstName')!.touched" class="text-danger error">FirstName Is Required</span>
                     </div>
                     <div class="col-xs-16 col-sm-4 col-md-3 col-lg-2 margin-left mt-2 w-50">
                         <label for="lasttName" class="custom-label">Last Name</label>
                         <input type="text" class="form-control" id="lastName" formControlName="lastName" [(ngModel)] = "data_row.lastName">
+                        <span *ngIf="Form.get('lastName')!.invalid && Form.get('lastName')!.touched" class="text-danger error">LastName Is Required</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
                     <label for="studentProfNumber" class="custom-label">Student / Prof Number</label>
                     <input type="text" class="form-control" id="studentProfNumber" formControlName="studentProfNumber" [(ngModel)] = "data_row.studentProfNumber">
+                    <span *ngIf="Form.get('studentProfNumber')!.invalid && Form.get('studentProfNumber')!.touched" class="text-danger error">Student/Prof Number Is Required</span>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
                     <label for="email" class="custom-label">Email (Just Academic Email)</label>
                     <input type="text" class="form-control" id="email" formControlName="email" [(ngModel)] = "data_row.email" >
+                    <span *ngIf="Form.get('email')!.invalid && Form.get('email')!.touched" class="text-danger error">Email Is not Valid</span>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
                     <label for="role" class="custom-label">role</label>
@@ -32,17 +43,22 @@
                         <option [value]="0|number">student</option>
                         <option [value]="1|number">master</option>
                       </select>
+                      <span *ngIf="Form.get('role')!.invalid && Form.get('role')!.touched" class="text-danger error">role Is Required</span>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
                     <label for="password" class="custom-label">Password</label>
                     <input type="password" class="form-control" id="password" formControlName="password" [(ngModel)] = "data_row.password">
+                    <ul class="mt-1 text-right list-inline " *ngFor="let error of passwordErrorMessages.password" class="error" style="padding: 0;">
+                        <li class="font-small text-danger list-inline-item"
+                            *ngIf="Form.get('password')!.hasError(error.type)
+                              && (Form.get('password')!.dirty
+                              || Form.get('password')!.touched)">
+                          {{ error.message }}
+                        </li>
+                      </ul>
                 </div>
-                <!-- <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
-                    <label for="password" class="custom-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="password" formControlName="confirmPassword" [(ngModel)]="data_row.confirmPassword">
-                </div> -->
                 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
-                    <button type="submit" class="w-100 p-2 mt-2 custom-btn">Sign Up</button>
+                    <button type="submit" class="w-100 p-2 mt-2 custom-btn" [disabled]="Form.invalid">Sign Up</button>
                 </div>
                 <p class="mt-2">Already have an account ? <a [routerLink]= "['/signIn']">Sign In</a></p>
             

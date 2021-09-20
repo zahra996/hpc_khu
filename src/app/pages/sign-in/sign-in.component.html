@@ -7,7 +7,7 @@
         <div class="col-12 col-md-8 col-lg-5">
             <h4 class="mb-3">Sign In</h4>
             <form class="custom-form" [formGroup]="Form" (ngSubmit)="onSubmit()">
-                <span class="help-block text-danger" role="alert" *ngIf="!Form.valid && Form.touched">Please fill in the information for all fields</span>
+                <span *ngIf="Form.invalid && Form.touched" class="text-danger error">Please Fill all Field!</span>
                     <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
                         <label for="username" class="custom-label">Email (Just Academic Email)</label>
                         <input type="text" class="form-control" id="username" formControlName="username">
@@ -22,12 +22,11 @@
                             <label class="form-check-label custom-check-label" for="remember-me">Remember Me!</label>
                     </div>  
                     <div class="col-md-12">
-                        <re-captcha (resolved)="resolved($event)"  class="col-12" 
+                        <re-captcha   class="col-12" 
                         formControlName="recaptchaReactive" 
                         siteKey="6Le1DmEcAAAAAEKOBRTzFOsTHit3xzskLLb2h0p7">  
                     </re-captcha>
                       </div>
-
                 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 mt-2 w-100">
                     <button type="submit" class="w-100 p-2 mt-2 custom-btn">Sign In</button>
                 </div>
